@@ -32,4 +32,14 @@ class AppTestCase < Test::Unit::TestCase
         assert_equal(3, dojo.all_rooms.length)
     end
 
+    def test_add_fellow
+        dojo = Dojo.new
+
+        dojo.add_employee("Benjamin Wacha", "fellow", "N")
+        dojo.add_employee("Ben Habib", "staff")
+        assert_equal(2, dojo.all_employees.length)
+        assert_equal(1, dojo.all_fellows.length)
+        assert_equal(1, dojo.all_staff.length)
+    end
+
 end
