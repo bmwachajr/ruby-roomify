@@ -18,6 +18,6 @@ end
 class Staff < Person
     # An employee that is a staff member
     def initialize(person_id, person_name, person_tyoe)
-        super(person_id, person_name, person_type
+        super(person_id, person_name, person_type)
     end
 end
