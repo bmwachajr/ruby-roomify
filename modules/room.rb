@@ -1,5 +1,6 @@
 class Room
   # Class of a room instance
+  attr_reader :room_name
   def initialize(room_id, room_name, room_type)
     @room_id = room_id
     @room_name = room_name
@@ -26,7 +27,7 @@ class OfficeSpace < Room
   # Class of a office space instanc
 
   def initialize(room_id, room_name)
-    @ma_occupants = 6
+    @max_occupants = 6
     room_type = "office space"
     super(room_id, room_name, room_type)
     @room_occupants = []
