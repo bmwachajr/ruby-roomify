@@ -21,4 +21,46 @@ class dojo
         end
 
         # add office spaces
+        if room_type.lower == "office"
+            begin
+                room_id = all_rooms.length
+                new_office = OfficeSpace.new(room_id, room_name)
+                @all_rooms << new_office
+                @all_offices << new_office
+                @avialable_offices << new_office
+                return "Office space #{new_office.room_name} was created uccessfully"
+            rescue
+                return "The office wqs not successfully created"
+            end
+        end
+
+        # add livinge spaces
+        if room_type.lower == "livingspace"
+            begin
+                room_id = all_rooms.length
+                new_living = LivingSpace.new(room_id, room_name)
+                @all_rooms << new_living
+                @all_offices << new_living
+                @avialable_offices << new_living
+                return "Office space #{new_office.room_name} was created uccessfully"
+            rescue
+                return "The office wqs not successfully created"
+            end
+        end
     end
+
+
+
+    if room_type.lower == "office"
+             begin
+                       room_id = all_rooms.length
+                 new_office = OfficeSpace.new(room_id, room_name)
+                 @all_rooms << new_office
+                  @all_offices << new_office
+              @avialable_offices << new_office
+
+                return "Office space #{new_office.room_name} was created                successfully"
+             rescue
+                return "The office wqs not successfully created"
+             end
+          end
