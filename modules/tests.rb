@@ -42,4 +42,14 @@ class AppTestCase < Test::Unit::TestCase
         assert_equal(1, dojo.all_staff.length)
     end
 
+    def test_allocate_officespace
+        dojo = Dojo.new
+        dojo.create_room("Oculus", "office")
+
+        dojo.add_employee("Benjamin Wacha", "fellow", "N")
+        dojo.add_employee("Ben Habib", "staff")
+        assert_equal(2, dojo.all_employees.length)
+        
+    end
+
 end
